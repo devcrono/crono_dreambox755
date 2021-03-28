@@ -115,9 +115,9 @@ function setupRW() {
 	if(!read64(g_jsview_butterfly.sub(16)).equals(new Int64("0xffff000000001337")))
 		die("[!] Failed to setup addrof/fakeobj primitives");
 	if(localStorage.autoExploit=="true")
-		debug_log("Webkit Executado com Sucesso!, Executando Kernel... <font color=\"#F00\">AGUARDE!!!</font>");
+		debug_log("Webkit Executado com <font color=\"#00FF12\">SUCESSO!!</font>, Executando Jailbreak e <font color=\"#F3D400\">GOLDHEN</font>... <font color=\"#F00\">AGUARDE!!!</font>");
 	else
-		debug_log("Webkit Executado com Sucesso! , Agora Execute o Jailbreak...");
+		debug_log("Webkit Executado com <font color=\"#00FF12\">SUCESSO!!</font>, Agora Execute o Jailbreak...");
 
 	/* Getting code execution */
 	/* ... */
