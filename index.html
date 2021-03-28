@@ -1,0 +1,392 @@
+<html manifest="offlineCache.manifest">
+	<style>
+		.button {
+		  background-color: #3D0068;  
+		  border-radius: 5px;
+		  color: #fff;
+		  padding: .5em;
+		  text-decoration: none;
+		  height:100%;
+		  display:inline-table;
+		  font-family: system-ui;
+		}
+
+		.button:focus,
+		.button:hover {
+		  background-color: #f00;
+		  color: White;
+		}
+
+		.titlehead {
+		  background-color: transparent;  
+		  border-radius: 5px;
+		  padding: .5em;
+		  text-decoration: none;
+		  text-align: center;
+		  margin-top: -10px;
+		  margin-bottom: -10px;
+		  font-family: system-ui;
+		  color: #fff;
+		}
+
+		.titlehead:focus,
+		.titlehead:hover {
+		  background-color: transparent;
+		  color: White;
+		}
+
+		.bg {
+			background-color:#000;
+			background-image:url(img/bg1.png);
+			background-attachment: fixed;
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+			text-align:center;
+			font-weight: bold;
+		}
+
+		#myProgress {
+		  border: 3px solid #f00;
+		  border-radius: 5px;
+		  background-color: transparent;
+		  height: 45px;
+		  position: absolute;
+		  top:0;
+		  bottom: 250;
+		  left: 150;
+		  right: 150;
+		  margin: auto;
+		}
+
+	#myBar {
+		  width: 0%;
+		  height: 40px;
+		  background-color: #3D0068;
+		  text-align: center;
+		  line-height: 30px;
+		  color: #fff;
+		  font-size: 35px;
+		  padding-top: 5px;
+		  border-radius: 5px;
+		}
+		
+		.switch {
+		  position: relative;
+		  display: inline-block;
+		  width: 60px;
+		  height: 34px;
+		}
+
+		.switch input { 
+		  opacity: 0;
+		  width: 0;
+		  height: 0;
+		}
+
+		.slider {
+		  position: absolute;
+		  cursor: pointer;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  bottom: 0;
+		  background-color: #3D0068;
+		  -webkit-transition: .4s;
+		  transition: .4s;
+		}
+		
+		.slider.new {
+		  position: absolute;
+		  cursor: pointer;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  bottom: 0;
+		  background-color: #6C0000;
+		  -webkit-transition: .4s;
+		  transition: .4s;
+		}
+
+		.slider:before {
+		  position: absolute;
+		  content: "";
+		  height: 26px;
+		  width: 26px;
+		  left: 4px;
+		  bottom: 4px;
+		  background-color: #fff;
+		  -webkit-transition: .4s;
+		  transition: .4s;
+		}
+
+		input:checked + .slider {
+		  background-color: #3D0068;
+		}
+
+		input:focus + .slider {
+		  box-shadow: 0 0 1px #6C0000;
+		}
+
+		input:checked + .slider:before {
+		  -webkit-transform: translateX(26px);
+		  -ms-transform: translateX(26px);
+		  transform: translateX(26px);
+		}
+
+		/* Rounded sliders */
+		.slider.round {
+		  border-radius: 34px;
+		}
+
+		.slider.round:before {
+		  border-radius: 50%;
+		}
+		.btn {
+width: auto;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 20px;
+margin: 4px 4px 4px 4px;
+border:none;
+cursor: pointer;
+background:transparent;
+color:#fff;
+box-shadow:0 10px 0 #4D0094;
+border-radius: 10px;
+transition: transform .2s;
+font-weight: bold;
+}
+.btn:hover {
+background:transparent;
+box-shadow:0 10px 0 #6C0000;
+color: #33FF00;
+border-radius: 10px;
+transition: transform .2s;
+transform: scale(1.3);
+font-weight: bold;
+}
+
+.btn-main {
+background:transparent;
+box-shadow:0 10px 0 #6C0000;
+color: white;
+border-radius: 10px;
+font-weight: bold;
+}
+.btn-main:hover {
+background:transparent;
+box-shadow:0 10px 0 #4D0094;
+color: #f00;
+border-radius: 10px;
+transition: transform .2s;
+transform: scale(1.3);
+font-weight: bold;
+}
+.icon {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    top: 70%;
+    right: 1%;
+} 
+.icone{
+  width: 70px;
+    height: 70px;
+}
+table, th, td {
+  text-align: center;
+  width:auto;
+ height: auto;
+  
+}
+hr{  
+width:100%;
+color: #fff
+}
+
+	</style>
+	<meta charset="UTF-8" />
+<link rel="shortcut icon" href="img/favicon.ico" />
+<title>CRONO_ DREAMBOX PS4 7.55 V1.10</title>
+	<body onload="go()" class="bg">
+		<script>
+			if(localStorage.jb==null){localStorage.jb='jb.js';}
+			if(localStorage.autoExploit==null){localStorage.autoExploit=false;}
+			var fw = (navigator.userAgent.substring(navigator.userAgent.indexOf('5.0 (') + 19, navigator.userAgent.indexOf(') Apple'))).replace('.', '');;
+			if(window.applicationCache.status==2){localStorage.is75XV2Cached=true;}
+			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Instalando Cache Offline... <font color=\"#f00\"> AGUARDE!!!</font>";localStorage.is75XV2Cached=false;};
+			window.applicationCache.onprogress=function(a){document.getElementById("myBar").style.width=(Math.round(100*(a.loaded/a.total)))+"%";document.getElementById("myBar").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
+			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Cache Offline Instalado com <font color=\"#00FF12\">SUCESSO!!</font>";localStorage.is75XV2Cached=true;setTimeout(function(){document.getElementById("progress").innerHTML="Agora, Feche e <font color=\"#f00\"> Re-Abra</font> o Navegador..."; }, 1500);};
+		</script>
+		<script>
+			var width = 0;
+			function frame1() {
+				var elem = document.getElementById("myBar");
+				var i=0;
+				var id = setInterval(fra, 10);
+				function fra(){
+				  if(i<10 && width<100){
+					  width++;
+					  elem.style.width = width + "%";
+					  elem.innerHTML = width  + "%";
+				  } i++;
+				}
+			}
+		</script>
+		<script>
+		function print(){}
+
+		var scriptCode = '';
+
+		function preloadScripts(lst)
+		{	
+			scriptCode = '';
+			for(var i = 0; i < lst.length; i++)
+			{
+				var xhr = new XMLHttpRequest();
+				xhr.open('GET', lst[i], false);
+				xhr.send('');
+				scriptCode += xhr.responseText + '\n';
+			}
+		}
+		
+		function done(){
+			document.getElementById("myProgress").remove();
+			if(document.getElementById("progress").innerHTML.includes("Failed")){
+				document.getElementById('load').innerHTML='<tr style="color:#fff;">'+
+					'<td id="aexp" colspan="6" align="center" font-family: system-ui;font-size: 20px;">Carregar Jailbreak Automaticamente &nbsp;</td>'+
+					'<td align="center" colspan="6"<label class="switch"><input id="tog1" onclick="if(document.getElementById(\'tog1\').checked){document.getElementById(\'toggleExploit\').style.display=\'table-row\';localStorage.autoExploit=true;}else{document.getElementById(\'toggleExploit\').style.display=\'none\';localStorage.autoExploit=false;}" type="checkbox"><span class="slider new round"></span></label></td>'+
+					'</tr>'+
+					'<tr><td><br/></td></tr>'+
+					'<tr id="toggleExploit" style="color:white; align="center"">'+
+					'<td id="oexp" align="center" colspan="4">Carregar Jailbreak Antigo Automaticamente &nbsp;</td>'+
+					'<td style="width: 10%;"><label class="switch"><input checked id="tog" onclick="if(document.getElementById(\'tog\').checked){document.getElementById(\'oexp\').style.color=\'#fff\';document.getElementById(\'nexp\').style.color=\'#2AFF00\';localStorage.jb=\'jb.js\';}else{document.getElementById(\'nexp\').style.color=\'#fff\';document.getElementById(\'oexp\').style.color=\'#2AFF00\';localStorage.jb=\'oldjb.js\';}" type="checkbox"><span class="slider round"></span></label></td>'+
+					'<td id="nexp" align="center"colspan="4">&nbsp; Carregar Jailbreak Novo Automaticamente</td>'+
+					'</tr>';
+				if(localStorage.autoExploit=="true"){document.getElementById('tog1').checked=true;document.getElementById('toggleExploit').style.display='table-row';}else{document.getElementById('tog1').checked=false;document.getElementById('toggleExploit').style.display='none';}
+			}else{
+				document.getElementById('load').innerHTML='<tr style="color:white;">'+
+					'<td id="aexp" align="center" colspan="6" style="color:#00C6FF;">Carregar Jailbreak Automaticamente &nbsp;</td>'+
+					'<td align="center" colspan="6" ><label class="switch"><input id="tog1" onclick="if(document.getElementById(\'tog1\').checked){document.getElementById(\'toggleExploit\').style.display=\'table-row\';document.getElementById(\'mexp\').style.display=\'none\';localStorage.autoExploit=true;}else{document.getElementById(\'toggleExploit\').style.display=\'none\';document.getElementById(\'mexp\').style.display=\'table-row\';localStorage.autoExploit=false;}" type="checkbox"><span class="slider new round"></span></label></td>'+
+					'</tr>'+
+					'<tr><td><br/></td></tr>'+
+					'<tr id="toggleExploit" style="color:#00FF12; "align="center">'+
+					'<td id="oexp" align="center" colspan="4">Carregar Jailbreak Antigo Automaticamente &nbsp;</td>'+
+					'<td align="center"><label class="switch"><input checked id="tog" onclick="if(document.getElementById(\'tog\').checked){document.getElementById(\'oexp\').style.color=\'#fff\';document.getElementById(\'nexp\').style.color=\'#00FF12\';localStorage.jb=\'jb.js\';}else{document.getElementById(\'nexp\').style.color=\'#fff\';document.getElementById(\'oexp\').style.color=\'#00FF12\';localStorage.jb=\'oldjb.js\';}" type="checkbox"><span class="slider round"></span></label></td>'+
+					'<td id="nexp" align="center"colspan="4" >&nbsp; Carregar Jailbreak Novo Automaticamente</td>'+
+					'</tr>'+
+					'<tr id="mexp">'+
+					'<td align="center" colspan="12" ><a href="#" id="exploit_old" class="button" onclick="toggle_payload(\'exploit_old\'); return false">Carregar Jailbreak Antigo Manualmente</a>&nbsp;'+
+					'<a href="#" id="exploit" class="button" onclick="toggle_payload(\'exploit\'); return false">Carregar Jailbreak Novo Manualmente</a>&nbsp;</td>'+
+					'</tr>'+
+					'<tr><td><br/></td></tr>'+
+					'<tr>'+
+					'<td align="center" colspan="3" >'+
+					'<a href="#" id="goldhen" class="btn btn-main" onMouseOver="progress.innerHTML=\'HEN-GOLD V1.0 Para todos os FW 7.5x\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" onclick="toggle_payload(\'goldhen\'); return false" style=""><img class="icone" src="img/HenEnable.png" /><br>GOLD-HEN V1.0</a>&nbsp;'+'</td>'+
+					'<td align="center" colspan="3" >'+
+					'<a href="#" id="mira75X" class="btn btn-main" onMouseOver="progress.innerHTML=\'MIRA Para todos os FW 7.5x\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" onclick="toggle_payload(\'mira75X\'); return false" style=""><img class="icone" src="img/indice.png" /><br>MIRA</a>&nbsp;'+'</td>'+
+					'<td align="center" colspan="3" >'+
+					'<a href="#" id="mira2b" class="btn btn-main" onMouseOver="progress.innerHTML=\'MIRA para todos os FW 7.5x + SPOOF (correção CE-30391-6)\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" onclick="toggle_payload(\'mira2b\'); return false" style=""><img class="icone" src="img/indice.png" /><br>MIRA-B</a>&nbsp;'+'</td>'+
+					'</tr>'+
+					'<tr><td  align="center" colspan="12"><br/></td></tr>'+ 
+					'<tr>'+
+                    '<td  align="center" colspan="12">'+
+					'<h1><font style=\'font-size:25px;text-align:center;\' color="#00FF12">PAYLOADS DISPONIVEIS</font></h1>'+
+					'<a  href="https://twitter.com/cronocardoso"><img class="icon" align="right" src="img/icon.gif"/></a> &nbsp;'+ 					
+					'<hr>'+
+                    '</td>'+
+					'</tr>'+
+					'<tr>'+
+					'<td align="center">'+
+						'<a href="#" id="binloader" class="btn" onMouseOver="progress.innerHTML=\'Injeta um arquivo BIN usando o seu IP na porta 9020\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" onclick="toggle_payload(\'binloader\'); return false" style=""> <img class="icone" src="img/binloader.png" /><br>Bin Loader</a>&nbsp;'+ '</td>'+
+					'<td align="center">'+
+						'<a href="#" id="dumper" class="btn" onMouseOver="progress.innerHTML=\'Dump seus jogos (necessário ter um drive USB em exFAT) \'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" onclick="toggle_payload(\'dumper\'); return false" style=""> <img class="icone" src="img/dumper.png" /><br>Game Dumper</a>&nbsp;'+'</td>'+
+					'<td align="center">'+
+						'<a href="#" id="ftp" class="btn" onMouseOver="progress.innerHTML=\'Acesse seu console através do FTP\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" onclick="toggle_payload(\'ftp\'); return false" style=""> <img class="icone" src="img/ftp.png" /><br>FTP</a>&nbsp;'+'</td>'+
+					'<td align="center">'+
+						'<a href="#" id="app2usb" class="btn" onMouseOver="progress.innerHTML=\'Transferi jogos para para unidade USB em exFAT \'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" onclick="toggle_payload(\'app2usb\'); return false" style=""> <img class="icone" src="img/app2usb.png" /><br>App-To-Usb</a>&nbsp;'+'</td>'+
+					'<td align="center">'+
+						'<a href="#" id="disableupdates" class="btn" onMouseOver="progress.innerHTML=\'Desabilita as Atualizações do Sistema\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" onclick="toggle_payload(\'disableupdates\'); return false" style=""> <img class="icone" src="img/disableupdate.png" /><br>Desabilitar Upadates</a>&nbsp;'+'</td>'+
+					'<td align="center">'+
+						'<a href="#" id="enableupdates" class="btn" onMouseOver="progress.innerHTML=\'Habilita as Atualizações do Sistema\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" onclick="toggle_payload(\'enableupdates\'); return false" style=""> <img class="icone" src="img/enableupdate.png" /><br>Habilitar Upadates</a>&nbsp;'+'</td>'+
+					'<td align="center">'+
+						'<a href="#" id="fancontrol" class="btn" onMouseOver="progress.innerHTML=\'Modifica a velocidade da FAN (BETA!)\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" onclick="toggle_payload(\'fancontrol\'); return false" style=""><img class="icone" src="img/FanControl.png" /><br>Fan Control</a>&nbsp;'+'</td>'+
+					'<td align="center">'+
+						'<a href="#" id="todex" class="btn" onMouseOver="progress.innerHTML=\'Habilita algumas funções Especiais na Aba dos Jogos\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" onclick="toggle_payload(\'todex\'); return false" style=""> <img class="icone" src="img/todex.png" /><br>ToDex</a>&nbsp;'+'</td>'+
+					'<td align="center">'+
+						'<a href="#" id="webrte" class="btn" onMouseOver="progress.innerHTML=\'Habilita algumas funções Especiais como envio de Cheaters\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" onclick="toggle_payload(\'webrte\'); return false" style=""> <img class="icone" src="img/rte.png" /><br>WebRTE</a>&nbsp;'+'</td>'+
+					'</tr>'+
+					'<tr><td  align="center" colspan="12"><br/></td></tr>'+ 
+					'<tr>'+
+					'<td align="center">'+
+					'<a href="#" id="backup" class="btn" onMouseOver="progress.innerHTML=\'Cria um Backup do BD do console em uma unidade USB\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" onclick="toggle_payload(\'backup\'); return false" style=""> <img class="icone" src="img/backup.png" /><br>Backup DB</a>&nbsp;'+'</td>'+
+					'<td align="center">'+
+					'<a href="#" id="restore" class="btn" onMouseOver="progress.innerHTML=\'Restaura o Backup do BD salvo na unidade USB\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" onclick="toggle_payload(\'restore\'); return false" style=""> <img class="icone" src="img/restore.png" /><br>Restaurar DB</a>&nbsp;'+'</td>'+
+					'<td align="center">'+
+					'<a href="#" id="historyblocker" class="btn" onMouseOver="progress.innerHTML=\'Desative o histórico do navegador\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" onclick="toggle_payload(\'historyblocker\'); return false" style=""><img class="icone" src="img/disableupdate.png" /><br>Bloquear Historico</a>&nbsp;'+'</td>'+
+					'<td align="center">'+
+					'<a href="#" id="enablebrowser" class="btn" onMouseOver="progress.innerHTML=\'Habilite o histórico do navegador\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" onclick="toggle_payload(\'enablebrowser\'); return false" style=""> <img class="icone" src="img/enableupdate.png" /><br>Habilitar Browser</a>&nbsp;'+'</td>'+
+					'<td align="center">'+
+					'<a href="#" id="ps4debug" class="btn" onMouseOver="progress.innerHTML=\'Habilita algumas funções Especiais para Desenvolvedores...\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" onclick="toggle_payload(\'ps4debug\'); return false" style=""> <img class="icone" src="img/ps4debug.png" /><br>PS4 Debug</a>&nbsp;'+'</td>'+
+					'<td align="center">'+
+					'<a href="#" id="exitidu" class="btn" onMouseOver="progress.innerHTML=\'Funções IDU Apenas para Desenvolvedores!\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" onclick="toggle_payload(\'exitidu\'); return false" style=""> <img class="icone" src="img/todex.png" /><br>EXIT IDU</a>&nbsp;'+'</td>'+
+					'<td align="center">'+
+					'<a href="#" id="renamer" class="btn" onMouseOver="progress.innerHTML=\'Renomeia RIFs "falsos" para RIFs "oficiais"\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" onclick="toggle_payload(\'rifrenamer\'); return false" style=""> <img class="icone" src="img/keydumper.png" /><br>RIF Renamer</a>&nbsp;'+'</td>'+
+					'<td align="center">'+
+					'<a href="#" id="disableaslr" class="btn" onMouseOver="progress.innerHTML=\'Desativa o ASLR (randomização do layout do espaço de endereço)\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" onclick="toggle_payload(\'disableaslr\'); return false" style="">  <img class="icone" src="img/disableupdate.png" /><br>Desabilitar ASLR</a>&nbsp;'+'</td>'+
+					'<td align="center">'+
+					'<a href="#" id="kerneldumper" class="btn" onMouseOver="progress.innerHTML=\'Dump do kernel do console para uma unidade USB\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" onclick="toggle_payload(\'kerneldumper\'); return false" style=""> <img class="icone" src="img/kdumper.png" /><br>Kernel Dumper</a>&nbsp;'+'</td>'+
+                    
+					'</tr>';
+				if(localStorage.autoExploit=="true"){document.getElementById('tog1').checked=true;document.getElementById('toggleExploit').style.display='table-row';document.getElementById('mexp').style.display='none';}else{document.getElementById('tog1').checked=false;document.getElementById('toggleExploit').style.display='none';document.getElementById('mexp').style.display='table-row';}
+			}
+			if(localStorage.jb=='jb.js'){document.getElementById('tog').checked=true;document.getElementById('oexp').style.color='#585858';document.getElementById('nexp').style.color='white';}else{document.getElementById('tog').checked=false;document.getElementById('oexp').style.color='white';document.getElementById('nexp').style.color='#585858';}
+		}
+		
+		window.midExploit = function()
+		{
+			if(localStorage.autoExploit=="true")
+				preloadScripts(['common/exploit.js','jb/'+localStorage.jb]);
+			else
+				preloadScripts(['common/exploit.js']);
+		}
+
+		window.postExploit = function()
+		{
+			setTimeout(function()
+			{	
+				eval.call(window, scriptCode);
+				done();
+			}, 100);
+
+		};
+		
+		window.postPayload = function()
+		{
+			setTimeout(function()
+			{	
+				eval.call(window, scriptCode);
+				//done();
+			}, 100);
+
+		};
+
+		</script>
+		<script src="./webkit/utils.js"></script>
+		<script src="./webkit/int64.js"></script>
+		<script src="./webkit/ps4.js"></script>
+		<h1 id="progress" class="titlehead">Loading.. Please Wait !!</h1><hr><br>
+		<button style="opacity:0" id="input1" onfocus="handle2()"></button>
+		<button style="opacity:0" id="input2"></button>
+		<button style="opacity:0" id="input3" onfocus="handle2()"></button>
+		<select style="opacity:0" id="select1">
+			<option value="value1">Value1</option>
+		</select>
+		<h1 id="myProgress">
+		  <div id="myBar">0%</div>
+		</h1>
+		<table id="load" align="center" style="width:600px;margin-top:-10px;">
+		</table>
+	</body>
+</html>
