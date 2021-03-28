@@ -255,30 +255,30 @@ color: #fff
 			document.getElementById("myProgress").remove();
 			if(document.getElementById("progress").innerHTML.includes("Failed")){
 				document.getElementById('load').innerHTML='<tr style="color:#fff;">'+
-					'<td id="aexp" colspan="6" align="center" font-family: system-ui;font-size: 20px;">Carregar Jailbreak Automaticamente &nbsp;</td>'+
+					'<td id="aexp" colspan="6" align="center" font-family: system-ui;font-size: 20px;" onMouseOver="progress.innerHTML=\'Se Habilitado, na proxima inicialização o JB será iniciando Automaticamente antes do menu\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'">Carregar Jailbreak Automaticamente &nbsp;</td>'+
 					'<td align="center" colspan="6"<label class="switch"><input id="tog1" onclick="if(document.getElementById(\'tog1\').checked){document.getElementById(\'toggleExploit\').style.display=\'table-row\';localStorage.autoExploit=true;}else{document.getElementById(\'toggleExploit\').style.display=\'none\';localStorage.autoExploit=false;}" type="checkbox"><span class="slider new round"></span></label></td>'+
 					'</tr>'+
 					'<tr><td><br/></td></tr>'+
 					'<tr id="toggleExploit" style="color:white; align="center"">'+
-					'<td id="oexp" align="center" colspan="4">Carregar Jailbreak Antigo Automaticamente &nbsp;</td>'+
+					'<td id="oexp" align="center" colspan="4" onMouseOver="progress.innerHTML=\'Ira Inicializar o JB Antigo Automaticamente antes de entrar no menu\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'">Carregar Jailbreak Antigo Automaticamente &nbsp;</td>'+
 					'<td style="width: 10%;"><label class="switch"><input checked id="tog" onclick="if(document.getElementById(\'tog\').checked){document.getElementById(\'oexp\').style.color=\'#fff\';document.getElementById(\'nexp\').style.color=\'#2AFF00\';localStorage.jb=\'jb.js\';}else{document.getElementById(\'nexp\').style.color=\'#fff\';document.getElementById(\'oexp\').style.color=\'#2AFF00\';localStorage.jb=\'oldjb.js\';}" type="checkbox"><span class="slider round"></span></label></td>'+
-					'<td id="nexp" align="center"colspan="4">&nbsp; Carregar Jailbreak Novo Automaticamente</td>'+
+					'<td id="nexp" align="center"colspan="4" onMouseOver="progress.innerHTML=\'Ira Inicializar o JB Novo Automaticamente antes de entrar no menu\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'">&nbsp; Carregar Jailbreak Novo Automaticamente</td>'+
 					'</tr>';
 				if(localStorage.autoExploit=="true"){document.getElementById('tog1').checked=true;document.getElementById('toggleExploit').style.display='table-row';}else{document.getElementById('tog1').checked=false;document.getElementById('toggleExploit').style.display='none';}
 			}else{
 				document.getElementById('load').innerHTML='<tr style="color:white;">'+
-					'<td id="aexp" align="center" colspan="6" style="color:#00C6FF;">Carregar Jailbreak Automaticamente &nbsp;</td>'+
+					'<td id="aexp" align="center" colspan="6" style="color:#00C6FF;" onMouseOver="progress.innerHTML=\'Se Habilitado, na proxima inicialização o JB será iniciando Automaticamente antes do menu\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'">Carregar Jailbreak Automaticamente &nbsp;</td>'+
 					'<td align="center" colspan="6" ><label class="switch"><input id="tog1" onclick="if(document.getElementById(\'tog1\').checked){document.getElementById(\'toggleExploit\').style.display=\'table-row\';document.getElementById(\'mexp\').style.display=\'none\';localStorage.autoExploit=true;}else{document.getElementById(\'toggleExploit\').style.display=\'none\';document.getElementById(\'mexp\').style.display=\'table-row\';localStorage.autoExploit=false;}" type="checkbox"><span class="slider new round"></span></label></td>'+
 					'</tr>'+
 					'<tr><td><br/></td></tr>'+
 					'<tr id="toggleExploit" style="color:#00FF12; "align="center">'+
-					'<td id="oexp" align="center" colspan="4">Carregar Jailbreak Antigo Automaticamente &nbsp;</td>'+
+					'<td id="oexp" align="center" colspan="4" onMouseOver="progress.innerHTML=\'Ira Inicializar o JB Antigo Automaticamente antes de entrar no menu\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'">Carregar Jailbreak Antigo Automaticamente &nbsp;</td>'+
 					'<td align="center"><label class="switch"><input checked id="tog" onclick="if(document.getElementById(\'tog\').checked){document.getElementById(\'oexp\').style.color=\'#fff\';document.getElementById(\'nexp\').style.color=\'#00FF12\';localStorage.jb=\'jb.js\';}else{document.getElementById(\'nexp\').style.color=\'#fff\';document.getElementById(\'oexp\').style.color=\'#00FF12\';localStorage.jb=\'oldjb.js\';}" type="checkbox"><span class="slider round"></span></label></td>'+
-					'<td id="nexp" align="center"colspan="4" >&nbsp; Carregar Jailbreak Novo Automaticamente</td>'+
+					'<td id="nexp" align="center"colspan="4" onMouseOver="progress.innerHTML=\'Ira Inicializar o JB Novo Automaticamente antes de entrar no menu\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'">&nbsp; Carregar Jailbreak Novo Automaticamente</td>'+
 					'</tr>'+
 					'<tr id="mexp">'+
-					'<td align="center" colspan="12" ><a href="#" id="exploit_old" class="button" onclick="toggle_payload(\'exploit_old\'); return false">Carregar Jailbreak Antigo Manualmente</a>&nbsp;'+
-					'<a href="#" id="exploit" class="button" onclick="toggle_payload(\'exploit\'); return false">Carregar Jailbreak Novo Manualmente</a>&nbsp;</td>'+
+					'<td align="center" colspan="12" ><a href="#" id="exploit_old" onMouseOver="progress.innerHTML=\'Inicializar o JB Antigo Manualmente\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" class="button" onclick="toggle_payload(\'exploit_old\'); return false">Carregar Jailbreak Antigo Manualmente</a>&nbsp;'+
+					'<a href="#" id="exploit" class="button" onMouseOver="progress.innerHTML=\'Inicializar o JB Novo Manualmente\'"; onmouseout="progress.innerHTML=\'CRONO_ DREAMBOX PS4 7.55 V1.10\'" onclick="toggle_payload(\'exploit\'); return false">Carregar Jailbreak Novo Manualmente</a>&nbsp;</td>'+
 					'</tr>'+
 					'<tr><td><br/></td></tr>'+
 					'<tr>'+
@@ -376,7 +376,7 @@ color: #fff
 		<script src="./webkit/utils.js"></script>
 		<script src="./webkit/int64.js"></script>
 		<script src="./webkit/ps4.js"></script>
-		<h1 id="progress" class="titlehead">Loading.. Please Wait !!</h1><hr><br>
+		<h1 id="progress" class="titlehead">Carregando... <font color="#f00">AGUARDE!!!</font></h1><hr><br>
 		<button style="opacity:0" id="input1" onfocus="handle2()"></button>
 		<button style="opacity:0" id="input2"></button>
 		<button style="opacity:0" id="input3" onfocus="handle2()"></button>
@@ -386,7 +386,7 @@ color: #fff
 		<h1 id="myProgress">
 		  <div id="myBar">0%</div>
 		</h1>
-		<table id="load" align="center" style="width:600px;margin-top:-10px;">
+		<table id="load" align="center" style="width:800px;margin-top:-10px;">
 		</table>
 	</body>
 </html>
