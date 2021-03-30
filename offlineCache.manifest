@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# v1.11 : 28-03-2021
+# v1.13 : 29-03-2021
  
 index.html
 img/app2usb.png
@@ -24,6 +24,7 @@ img/todex.png
 img/ps4debug.png
 img/spoofer.png
 img/gtav.png
+img/linux.png
 webkit/utils.js
 webkit/int64.js
 webkit/ps4.js
@@ -59,3 +60,4 @@ payloads/ps4debug.js
 payloads/webrte.js
 payloads/spoofer.js
 payloads/lamance132.js
+payloads/lixux1g.js

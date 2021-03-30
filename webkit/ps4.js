@@ -209,6 +209,9 @@ function toggle_payload(pld){
 	}else if(pld == "lamance132"){
 		document.getElementById("progress").innerHTML="Carregando MOD GTA-V Lamance V1.32... <font color=\"#F00\">AGUARDE!!!</font>";
 		preloadScripts(['payloads/preloader.js', 'payloads/lamance132.js', 'payloads/loader.js']);
+	}else if(pld == "linux1gb"){
+		document.getElementById("progress").innerHTML="Carregando LINUX 1GB... <font color=\"#F00\">AGUARDE!!!</font>";
+		preloadScripts(['payloads/preloader.js', 'payloads/linux1g.js', 'payloads/loader.js']);
 	}
 	if(window.postPayload)
 		window.postPayload();
