@@ -134,7 +134,7 @@ function toggle_payload(pld){
 		document.getElementById("progress").innerHTML="Realizando o Jailbreak.. <font color=\"#F00\">AGUARDE!!!</font>";
 		preloadScripts(['jb/oldjb.js']);
 	}else if(pld == "binloader"){
-		document.getElementById("progress").innerHTML="Aguardando o envio do arquivo .BIN para a porta 9020.";
+		document.getElementById("progress").innerHTML="Aguardando o envio do arquivo .BIN para a porta 9021.";
 		preloadScripts(['payloads/preloader.js', 'payloads/loader.js']);
 	}else if(pld == "mira75X"){
 		document.getElementById("progress").innerHTML="Carregando <font color=\"#001EFF\">MIRA</font>... <font color=\"#F00\">AGUARDE!!!</font>";
@@ -199,7 +199,11 @@ function toggle_payload(pld){
 		preloadScripts(['payloads/preloader.js', 'payloads/ps4debug.js', 'payloads/loader.js']);
 	}else if(pld == "goldhen"){
 		document.getElementById("progress").innerHTML="Carregando <font color=\"#F3D400\">GOLDHEN V1.0</font>... <font color=\"#F00\">AGUARDE!!!</font>";
-		preloadScripts(['payloads/preloader.js', 'payloads/goldhen.js', 'payloads/loader.js']);
+		if(fw=="755"){
+			preloadScripts(['payloads/preloader.js', 'payloads/goldhen'+fw+'.js', 'payloads/loader.js']);
+		}else{
+			preloadScripts(['payloads/preloader'+fw+'.js', 'payloads/goldhen'+fw+'.js', 'payloads/loader.js']);	
+		}
 	}else if(pld == "webrte"){
 		document.getElementById("progress").innerHTML="Carregando WEB-RTE... <font color=\"#F00\">AGUARDE!!!</font>";
 		preloadScripts(['payloads/preloader.js', 'payloads/webrte.js', 'payloads/loader.js']);
