@@ -200,7 +200,7 @@ function toggle_payload(pld){
 	}else if(pld == "goldhen"){
 		document.getElementById("progress").innerHTML="Carregando <font color=\"#F3D400\">GOLDHEN V1.0</font>... <font color=\"#F00\">AGUARDE!!!</font>";
 		if(fw=="755"){
-			preloadScripts(['payloads/preloader.js', 'payloads/goldhen'+fw+'.js', 'payloads/loader.js']);
+			preloadScripts(['payloads/preloader.js', 'payloads/goldhen755.js', 'payloads/loader.js']);
 		}else{
 			preloadScripts(['payloads/preloader'+fw+'.js', 'payloads/goldhen'+fw+'.js', 'payloads/loader.js']);	
 		}
