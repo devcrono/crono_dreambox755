@@ -197,12 +197,18 @@ function toggle_payload(pld){
 	}else if(pld == "ps4debug"){
 		document.getElementById("progress").innerHTML="Iniciando PS4 Debug... <font color=\"#F00\">AGUARDE!!!</font>";
 		preloadScripts(['payloads/preloader.js', 'payloads/ps4debug.js', 'payloads/loader.js']);
-	}else if(pld == "goldhen"){
+	}else if(pld == "goldhenv1.0"){
 		document.getElementById("progress").innerHTML="Carregando <font color=\"#F3D400\">GOLDHEN V1.0</font>... <font color=\"#F00\">AGUARDE!!!</font>";
 		if(fw=="755"){
 			preloadScripts(['payloads/preloader.js', 'payloads/goldhen755.js', 'payloads/loader.js']);
 		}else{
 			preloadScripts(['payloads/preloader'+fw+'.js', 'payloads/goldhen'+fw+'.js', 'payloads/loader.js']);	
+		}else if(pld == "goldhenv1.1b3"){
+		document.getElementById("progress").innerHTML="Carregando <font color=\"#F3D400\">GOLDHEN V1.1b3</font>... <font color=\"#F00\">AGUARDE!!!</font>";
+		if(fw=="755"){
+			preloadScripts(['payloads/preloader.js', 'payloads/goldhen755v1.1b3.js', 'payloads/loader.js']);
+		}else{
+			preloadScripts(['payloads/preloader'+fw+'.js', 'payloads/goldhen'+fw+'v1.1b3.js', 'payloads/loader.js']);	
 		}
 	}else if(pld == "webrte"){
 		document.getElementById("progress").innerHTML="Carregando WEB-RTE... <font color=\"#F00\">AGUARDE!!!</font>";
