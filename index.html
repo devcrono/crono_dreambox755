@@ -1,0 +1,264 @@
+<html>
+	<style>
+		.button {
+		  background-color: #3D0068;  
+		  border-radius: 5px;
+		  color: #fff;
+		  padding: .5em;
+		  text-decoration: none;
+		  height:100%;
+		  display:inline-table;
+		  font-family: system-ui;
+		}
+
+		.button:focus,
+		.button:hover {
+		  background-color: #f00;
+		  color: White;
+		}
+
+		.titlehead {
+		  background-color: transparent;  
+		  border-radius: 5px;
+		  padding: .5em;
+		  text-decoration: none;
+		  text-align: center;
+		  margin-top: -10px;
+		  margin-bottom: -10px;
+		  font-family: system-ui;
+		  color: #fff;
+		}
+
+		.titlehead:focus,
+		.titlehead:hover {
+		  background-color: transparent;
+		  color: White;
+		}
+
+		.bg {
+			background-color:#000;
+			background-image:url(img/bg1.png);
+			background-attachment: fixed;
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+			text-align:center;
+			font-weight: bold;
+			width:100%;
+			height:100%;
+			scroll-behavior: none;
+		}
+
+		#myProgress {
+		  border: 3px solid #f00;
+		  border-radius: 5px;
+		  background-color: transparent;
+		  height: 45px;
+		  position: absolute;
+		  top:0;
+		  bottom: 250;
+		  left: 150;
+		  right: 150;
+		  margin: auto;
+		}
+
+	#myBar {
+		  width: 0%;
+		  height: 40px;
+		  background-color: #3D0068;
+		  text-align: center;
+		  line-height: 30px;
+		  color: #fff;
+		  font-size: 35px;
+		  padding-top: 5px;
+		  border-radius: 5px;
+		}
+		
+		.switch {
+		  position: relative;
+		  display: inline-block;
+		  width: 60px;
+		  height: 34px;
+		}
+
+		.switch input { 
+		  opacity: 0;
+		  width: 0;
+		  height: 0;
+		}
+
+		.slider {
+		  position: absolute;
+		  cursor: pointer;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  bottom: 0;
+		  background-color: #3D0068;
+		  -webkit-transition: .4s;
+		  transition: .4s;
+		}
+		
+		.slider.new {
+		  position: absolute;
+		  cursor: pointer;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  bottom: 0;
+		  background-color: #6C0000;
+		  -webkit-transition: .4s;
+		  transition: .4s;
+		}
+
+		.slider:before {
+		  position: absolute;
+		  content: "";
+		  height: 26px;
+		  width: 26px;
+		  left: 4px;
+		  bottom: 4px;
+		  background-color: #fff;
+		  -webkit-transition: .4s;
+		  transition: .4s;
+		}
+
+		input:checked + .slider {
+		  background-color: #3D0068;
+		}
+
+		input:focus + .slider {
+		  box-shadow: 0 0 1px #6C0000;
+		}
+
+		input:checked + .slider:before {
+		  -webkit-transform: translateX(26px);
+		  -ms-transform: translateX(26px);
+		  transform: translateX(26px);
+		}
+
+		/* Rounded sliders */
+		.slider.round {
+		  border-radius: 34px;
+		}
+
+		.slider.round:before {
+		  border-radius: 50%;
+		}
+		.btn {
+width: auto;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 20px;
+margin: 4px 4px 4px 4px;
+border:none;
+cursor: pointer;
+background:transparent;
+color:#fff;
+box-shadow:0 10px 0 #4D0094;
+border-radius: 10px;
+transition: transform .2s;
+font-weight: bold;
+}
+.btn:hover {
+background:transparent;
+box-shadow:0 10px 0 #6C0000;
+color: #33FF00;
+border-radius: 10px;
+transition: transform .2s;
+transform: scale(1.3);
+font-weight: bold;
+}
+
+.btn-main {
+background:transparent;
+box-shadow:0 10px 0 #6C0000;
+color: white;
+border-radius: 10px;
+font-weight: bold;
+}
+.btn-main:hover {
+background:transparent;
+box-shadow:0 10px 0 #4D0094;
+color: #f00;
+border-radius: 10px;
+transition: transform .2s;
+transform: scale(1.3);
+font-weight: bold;
+}
+.icon {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    top: 70%;
+    right: 1%;
+} 
+.icone{
+  width: 130px;
+  height: 130px;
+}
+th, td {
+text-align: center;
+width:auto;
+height: auto;
+
+  
+}
+hr{  
+width:100%;
+color: #fff
+}
+table{
+	width: 100%;
+    text-align: center;
+}
+
+	</style>
+	<meta charset="UTF-8" />
+<link rel="shortcut icon" href="img/favicon.ico" />
+<title>CRONO_ DREAMBOX PS4 7.5x V1.15 AUTOMATICO</title>
+	<body class="bg">
+<h1 id="msgs" class="titlehead">Seja Bem-Vindo Escolha seu idioma / Welcome Choose your language <font color="#127E00">PT</font>-<font color="#FCFF00">BR</font> / <font color="#FF0000">EN</font></h1><hr><br>
+
+<div style="text-align:center">
+<br><br><br><br><br><br>
+
+<button class="btn btn-main" onmouseover="ptbr()" onmouseout="pagetitle()" onclick=load_ptbr()><img class="icone" src="img/BR.png" /><br><font color="#127E00">PT</font> <font color="#fff">-</font> <font color="#FCFF00">BR</font></button>&nbsp;
+
+<button class="btn btn-main" onmouseover="en()" onmouseout="pagetitle()" onclick=load_en()><img class="icone" src="img/EN.png" /><br><font color="#FF0000">EN</font></button>&nbsp;
+<br>
+<a href="https://twitter.com/cronocardoso"><img class="icon" src="img/icon.gif"/></a> 
+
+<br><br><br><br>
+
+</div>
+<script>
+
+function ptbr(){
+document.getElementById("msgs").innerHTML = "Usar em Português do Brasil";
+}
+function en(){
+document.getElementById("msgs").innerHTML = "Use in English";
+}
+function pagetitle(){
+document.getElementById("msgs").innerHTML = "CRONO_ DREAMBOX PS4 7.5x V1.15 AUTOMATICO";
+}
+
+function load_ptbr(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'ptbr';
+        link.click();
+}
+function load_en(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'en';
+        link.click();
+}
+</script>
+
+	</body>
+</html>
