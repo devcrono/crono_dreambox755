@@ -216,9 +216,9 @@ table{
 	</style>
 	<meta charset="UTF-8" />
 <link rel="shortcut icon" href="img/favicon.ico" />
-<title>CRONO_ DREAMBOX PS4 7.5x V1.15.5 AUTOMÁTICO / AUTOMATIC</title>
+<title>CRONO_ DREAMBOX PS4 7.5x V1.16 AUTOMÁTICO / AUTOMATIC</title>
 	<body class="bg">
-<h1 id="msgs" class="titlehead">Seja Bem-Vindo Escolha seu idioma / Welcome Choose your language <font color="#127E00">PT</font>-<font color="#FCFF00">BR</font> / <font color="#FF0000">EN</font></h1><hr><br>
+<h1 id="msgs" class="titlehead">Escolha seu idioma / Choose your language / Seleccione su idioma <font color="#127E00">PT</font>-<font color="#FCFF00">BR</font> / <font color="#FF0000">EN</font> / <font color="#FCFF00">ES</font><font color="#FF0000">P</font></h1><hr><br>
 
 <div style="text-align:center">
 <br><br><br><br><br><br>
@@ -226,6 +226,8 @@ table{
 <button class="btn btn-main" onmouseover="ptbr()" onmouseout="pagetitle()" onclick=load_ptbr()><img class="icone" src="img/BR.png" /><br><font color="#127E00">PT</font> <font color="#fff">-</font> <font color="#FCFF00">BR</font></button>&nbsp;
 
 <button class="btn btn-main" onmouseover="en()" onmouseout="pagetitle()" onclick=load_en()><img class="icone" src="img/EN.png" /><br><font color="#FF0000">EN</font></button>&nbsp;
+
+<button class="btn btn-main" onmouseover="esp()" onmouseout="pagetitle()" onclick=load_esp()><img class="icone" src="img/ESP.png" /><br> <font color="#FCFF00">ES</font><font color="#FF0000">P</font></button>&nbsp;
 <br>
 <a href="https://twitter.com/cronocardoso"><img class="icon" src="img/icon.gif"/></a> 
 
@@ -240,8 +242,11 @@ document.getElementById("msgs").innerHTML = "Usar em Português do Brasil";
 function en(){
 document.getElementById("msgs").innerHTML = "Use in English";
 }
+function esp(){
+document.getElementById("msgs").innerHTML = "Usar en español";
+}
 function pagetitle(){
-document.getElementById("msgs").innerHTML = "CRONO_ DREAMBOX PS4 7.5x V1.15.5 AUTOMÁTICO / AUTOMATIC";
+document.getElementById("msgs").innerHTML = "CRONO_ DREAMBOX PS4 7.5x V1.16 AUTOMÁTICO / AUTOMATIC";
 }
 
 function load_ptbr(){
@@ -256,6 +261,12 @@ function load_en(){
   var link = document.createElement('a');
         document.body.appendChild(link);
         link.href = 'en';
+        link.click();
+}function load_esp(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'esp';
         link.click();
 }
 </script>
