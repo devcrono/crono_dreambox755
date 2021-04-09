@@ -204,6 +204,13 @@ function toggle_payload(pld){
 		}else{
 			preloadScripts(['payloads/preloader'+fw+'.js', 'payloads/goldhen'+fw+'.js', 'payloads/loader.js']);	
 		}
+	}else if(pld == "goldhen11"){
+		document.getElementById("progress").innerHTML="Carregando <font color=\"#F3D400\">GOLDHEN V1.1</font>... <font color=\"#F00\">AGUARDE!!!</font>";
+		if(fw=="755"){
+			preloadScripts(['payloads/preloader.js', 'payloads/goldhen11755.js', 'payloads/loader.js']);
+		}else{
+			preloadScripts(['payloads/preloader'+fw+'.js', 'payloads/goldhen11'+fw+'.js', 'payloads/loader.js']);	
+		}
 	}else if(pld == "webrte"){
 		document.getElementById("progress").innerHTML="Carregando WEB-RTE... <font color=\"#F00\">AGUARDE!!!</font>";
 		preloadScripts(['payloads/preloader.js', 'payloads/webrte.js', 'payloads/loader.js']);
