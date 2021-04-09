@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# v1.14 : 31-03-2021
+# v1.16 : 09-04-2021
  
 index.html
 img/app2usb.png
@@ -57,6 +57,9 @@ payloads/exitidu.js
 payloads/goldhen750.js
 payloads/goldhen751.js
 payloads/goldhen755.js
+payloads/goldhen11750.js
+payloads/goldhen11751.js
+payloads/goldhen11755.js
 payloads/mira2b.js
 payloads/ps4debug.js
 payloads/webrte.js
