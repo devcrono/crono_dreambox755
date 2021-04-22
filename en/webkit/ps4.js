@@ -146,6 +146,9 @@ function toggle_payload(pld){
 	}else if(pld == "mira2b"){
 		document.getElementById("progress").innerHTML="Loading <font color=\"#001EFF\">MIRA-B</font> with <font color=\"#FF7E00\">SPOOFER</font>... <font color=\"#F00\">WAIT!!!</font>";
 		preloadScripts(['payloads/preloader.js', 'payloads/mira2b.js', 'payloads/loader.js']);
+	}else if(pld == "hen213b"){
+		document.getElementById("progress").innerHTML="Loading <font color=\"#F3D400\">HEN V2.1.3b</font> with <font color=\"#FF7E00\">SPOOFER</font>... <font color=\"#F00\">WAIT!!!</font>";
+		preloadScripts(['payloads/preloader.js', 'payloads/hen213b.js', 'payloads/loader.js']);
 	}else if(pld == "ftp"){
 		setTimeout(function(){document.getElementById("progress").innerHTML="Starting FTP, Access through port 1337."; }, 7000);
 		preloadScripts(['payloads/preloader.js', 'payloads/ftp.js', 'payloads/loader.js']);
