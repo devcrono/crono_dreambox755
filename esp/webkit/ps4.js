@@ -219,7 +219,7 @@ function toggle_payload(pld){
 		preloadScripts(['payloads/preloader.js', 'payloads/webrte.js', 'payloads/loader.js']);
 	}else if(pld == "spoofer"){
 		document.getElementById("progress").innerHTML="Cargando SPOOF FW V8.03... <font color=\"#F00\">¡¡¡ESPERE!!!</font>";
-		preloadScripts(['payloads/preloader.js', 'payloads/spoof.js', 'payloads/loader.js']);
+		preloadScripts(['payloads/preloader.js', 'payloads/spoofer.js', 'payloads/loader.js']);
 	}else if(pld == "lamance132"){
 		document.getElementById("progress").innerHTML="Cargando MOD GTA-V Lamance V1.32... <font color=\"#F00\">¡¡¡ESPERE!!!</font>";
 		preloadScripts(['payloads/preloader.js', 'payloads/lamance132.js', 'payloads/loader.js']);
