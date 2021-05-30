@@ -226,6 +226,9 @@ function toggle_payload(pld){
 	}else if(pld == "linux1gb"){
 		document.getElementById("progress").innerHTML="Loading LINUX 1GB... <font color=\"#F00\">WAIT!!!</font>";
 		preloadScripts(['payloads/preloader.js', 'payloads/linux1g.js', 'payloads/loader.js']);
+	}else if(pld == "linux3gb"){
+		document.getElementById("progress").innerHTML="Loading LINUX 3GB... <font color=\"#F00\">WAIT!!!</font>";
+		preloadScripts(['payloads/preloader.js', 'payloads/linux3g.js', 'payloads/loader.js']);
 	}
 	if(window.postPayload)
 		window.postPayload();
