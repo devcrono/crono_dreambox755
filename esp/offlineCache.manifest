@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# V1.19 : 22-04-2021
+# V1.20 : 22-04-2021
  
 index.html
 img/app2usb.png
@@ -67,3 +67,4 @@ payloads/webrte.js
 payloads/spoofer.js
 payloads/lamance132.js
 payloads/linux1g.js
+payloads/linux3g.js
